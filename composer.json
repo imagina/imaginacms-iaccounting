@@ -1,0 +1,42 @@
+{
+    "name": "vendor/iaccounting-module",
+    "description": "",
+    "type": "asgard-module",
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "composer/installers": "~1.0",
+        "imagina/core-module": "v10.x-dev",
+        "imagina/ihelpers-module": "v10.x-dev"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.5",
+        "phpunit/phpunit": "^10"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Iaccounting\\": ".",
+            "Modules\\": "Modules/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Dev Imagina",
+            "email": "dev@imaginacolombia.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Modules\\Iaccounting\\": ""
+        }
+    },
+
+    "extra": {
+        "branch-alias": {
+            "dev-master": "4.0.x-dev",
+            "dev-v10.x": "10.0.x-dev"
+        }
+    }
+}

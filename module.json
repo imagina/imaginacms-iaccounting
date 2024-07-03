@@ -1,0 +1,14 @@
+{
+    "name": "Iaccounting",
+    "alias": "iaccounting",
+    "version": "1.0.0",
+	"description": "",
+    "keywords": [],
+    "priority": 1,
+    "providers": [
+        "Modules\\Iaccounting\\Providers\\IaccountingServiceProvider",
+        "Modules\\Iaccounting\\Providers\\EventServiceProvider",
+        "Modules\\Iaccounting\\Providers\\RouteServiceProvider"
+    ],
+    "files": []
+}
