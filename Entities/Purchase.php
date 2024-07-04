@@ -4,10 +4,11 @@ namespace Modules\Iaccounting\Entities;
 
 use Astrotomic\Translatable\Translatable;
 use Modules\Core\Icrud\Entities\CrudModel;
+use Modules\Media\Support\Traits\MediaRelation;
 
 class Purchase extends CrudModel
 {
-  use Translatable;
+  use MediaRelation;
 
   protected $table = 'iaccounting__purchases';
   public $transformer = 'Modules\Iaccounting\Transformers\PurchaseTransformer';
@@ -26,5 +27,19 @@ class Purchase extends CrudModel
     'deleted' => []
   ];
   public $translatedAttributes = [];
-  protected $fillable = [];
+  protected $fillable = [
+    'document_type',
+    'elaboration_date',
+    'total',
+    'subtotal',
+    'currency_code',
+    'payment_method',
+    'invoice_items',
+    'options'
+  ];
+
+  protected $casts = [
+    'invoice_items' => 'array',
+    'options' => 'array'
+  ];
 }
