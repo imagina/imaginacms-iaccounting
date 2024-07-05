@@ -35,6 +35,9 @@ class Purchase extends CrudModel
     'currency_code',
     'payment_method',
     'invoice_items',
+    'provider_name',
+    'provider_id_type',
+    'provider_id_number',
     'options'
   ];
 
