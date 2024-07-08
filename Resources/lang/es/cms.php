@@ -8,6 +8,7 @@ return [
   'title' => [
     'uploadDocument' => 'Sube tu Documento para Analizar',
     'verifyDocument' => 'Verifica tu Documento',
+    'infoDocument' => 'Información de tu documento'
   ],
   'button' => [
   ],

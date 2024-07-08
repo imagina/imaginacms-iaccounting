@@ -8,6 +8,7 @@ return [
   'title' => [
     'analyzeDocument' => 'Upload Your Document for Analysis',
     'verifyDocument' => 'Verify Your Document',
+    'infoDocument' => 'Your Document Info',
   ],
   'button' => [
   ],
