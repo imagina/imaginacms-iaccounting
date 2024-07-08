@@ -2,7 +2,6 @@
 
 namespace Modules\Iaccounting\Entities;
 
-use Astrotomic\Translatable\Translatable;
 use Modules\Core\Icrud\Entities\CrudModel;
 use Modules\Media\Support\Traits\MediaRelation;
 
@@ -35,9 +34,6 @@ class Purchase extends CrudModel
     'currency_code',
     'payment_method',
     'invoice_items',
-    'provider_name',
-    'provider_id_type',
-    'provider_id_number',
     'options'
   ];
 
