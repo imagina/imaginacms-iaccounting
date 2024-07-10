@@ -34,11 +34,23 @@ class Purchase extends CrudModel
     'currency_code',
     'payment_method',
     'invoice_items',
-    'options'
+    'options',
+    'provider_id',
+    'accountingaccount_id'
   ];
 
   protected $casts = [
     'invoice_items' => 'array',
     'options' => 'array'
   ];
+
+  public function provider()
+  {
+    return $this->belongsTo(Provider::class);
+  }
+
+  public function accountingaccount()
+  {
+    return $this->belongsTo(AccountingAccount::class);
+  }
 }

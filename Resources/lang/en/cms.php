@@ -3,12 +3,18 @@
 return [
   'sidebar' => [
     'adminGroup' => 'Accounting',
-    'adminPurchases' => 'Expense'
+    'adminPurchases' => 'Expense',
+    'adminProviders' => 'Providers',
+    'adminAccountingaccounts' => 'Accounting Accounts'
   ],
   'title' => [
     'analyzeDocument' => 'Upload Your Document for Analysis',
     'verifyDocument' => 'Verify Your Document',
     'infoDocument' => 'Your Document Info',
+    'updateProvider' => 'Update Provider',
+    'newProvider' => 'New Provider',
+    'newAccountingAccount' => 'New Accounting Account',
+    'updateAccountingAccount' => 'Update Accounting Account',
   ],
   'button' => [
   ],
@@ -29,6 +35,9 @@ return [
     'providerName' => 'Provider Name',
     'providerIdNumber' => 'Provider Identification',
     'providerIdType' => 'Type of Provider Identification',
+    'idType' => 'Type of Identification',
+    'idNumber' => 'Identification',
+    'idNumberN8N' => 'Identification Found',
     'documentAnalysis' => 'Document for Analysis'
   ],
   'messages' => [

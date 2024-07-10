@@ -3,12 +3,18 @@
 return [
   'sidebar' => [
     'adminGroup' => 'Contabilidad',
-    'adminPurchases' => 'Gastos'
+    'adminPurchases' => 'Gastos',
+    'adminProviders' => 'Proveedores',
+    'adminAccountingaccounts' => 'Cuentas Contables'
   ],
   'title' => [
     'uploadDocument' => 'Sube tu Documento para Analizar',
     'verifyDocument' => 'Verifica tu Documento',
-    'infoDocument' => 'Información de tu documento'
+    'infoDocument' => 'Información de tu documento',
+    'updateProvider' => 'Actualizar Proveedor',
+    'newProvider' => 'Nuevo Proveedor',
+    'newAccountingAccount' => 'Nueva Cuenta Contable',
+    'updateAccountingAccount' => 'Actualizar Cuenta Contable',
   ],
   'button' => [
   ],
@@ -29,6 +35,9 @@ return [
     'providerName' => 'Nombre del Proveedor',
     'providerIdNumber' => 'Identificación del Proveedor',
     'providerIdType' => 'Tipo de Identificación del Proveedor',
+    'idNumber' => 'Identificación',
+    'idNumberN8N' => 'Identificación Encontrada',
+    'idType' => 'Tipo de Identificación',
     'documentAnalysis' => 'Documento para Analizar'
   ],
   'messages' => [
