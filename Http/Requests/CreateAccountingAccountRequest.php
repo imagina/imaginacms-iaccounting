@@ -8,7 +8,10 @@ class CreateAccountingAccountRequest extends BaseFormRequest
 {
     public function rules()
     {
-        return [];
+        return [
+          'name' => 'required|min:2',
+          'external_id' => 'required',
+        ];
     }
 
     public function translationRules()

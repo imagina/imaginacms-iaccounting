@@ -8,7 +8,13 @@ class CreateProviderRequest extends BaseFormRequest
 {
     public function rules()
     {
-        return [];
+        return [
+          'person_kind' => 'required|min:2',
+          'name' => 'required|min:2',
+          'type_id' => 'required|min:2',
+          'identification' => 'required|min:2',
+          'city_id' => 'required',
+        ];
     }
 
     public function translationRules()

@@ -28,7 +28,7 @@ class Purchase extends CrudModel
   public $translatedAttributes = [];
   protected $fillable = [
     'document_type',
-    'elaboration_date',
+    'invoice_date',
     'total',
     'subtotal',
     'currency_code',

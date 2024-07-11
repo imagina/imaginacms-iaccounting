@@ -3,6 +3,7 @@
 namespace Modules\Iaccounting\Entities;
 
 use Modules\Core\Icrud\Entities\CrudModel;
+use Modules\Ilocations\Entities\City;
 
 class Provider extends CrudModel
 {
@@ -22,5 +23,22 @@ class Provider extends CrudModel
     'deleting' => [],
     'deleted' => []
   ];
-  protected $fillable = ['name', 'type_id', 'identification', 'external_id'];
+  protected $fillable = [
+    'person_kind',
+    'name',
+    'lastname',
+    'type_id',
+    'identification',
+    'check_digit',
+    'address',
+    'indicative_phone',
+    'phone_number',
+    'city_id',
+    'external_id'
+  ];
+
+  public function city()
+  {
+    return $this->belongsTo(City::class);
+  }
 }

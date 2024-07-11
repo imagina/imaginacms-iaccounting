@@ -8,7 +8,14 @@ class CreatePurchaseRequest extends BaseFormRequest
 {
     public function rules()
     {
-        return [];
+        return [
+          'document_type' => 'required|min:2',
+          'invoice_date' => 'required|min:2',
+          'total' => 'required',
+          'subtotal' => 'required',
+          'payment_method' => 'required',
+          'provider_id' => 'required',
+        ];
     }
 
     public function translationRules()
