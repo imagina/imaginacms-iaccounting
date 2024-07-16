@@ -3,7 +3,7 @@
 return [
   'sidebar' => [
     'adminGroup' => 'Contabilidad',
-    'adminPurchases' => 'Gastos',
+    'adminPurchases' => 'Compras',
     'adminProviders' => 'Proveedores',
     'adminAccountingaccounts' => 'Cuentas Contables'
   ],
@@ -52,7 +52,7 @@ return [
     'checkDigit' => 'DV'
   ],
   'messages' => [
-    'descriptionAnalyze' => 'Sube tus archivos en formato PDF, imagen o word (soportes, facturas, recibos, etc.) para que podamos analizarlos. Asegúrate de que el archivo sea legible.',
+    'descriptionAnalyze' => 'Sube tus archivos en formato imagen (soportes, facturas, recibos, etc.) para que podamos analizarlos. Asegúrate de que el archivo sea legible.',
     'descriptionValidate' => 'Por favor, revisa cuidadosamente la información que aparece a continuación y asegúrate de que todo sea correcto. Si encuentras algún error, corrígelo antes de continuar.',
     'providerDesc' => 'No hemos encontrado el proveedor. Por favor, verifica la identificación. Si aún no lo has creado, selecciónalo en el campo de proveedor y haz clic en \'Crear nuevo\'.',
     'providerCreateDesc' => 'Ten en cuenta que vas a crear un nuevo proveedor. Recuerda verificar la información y llenar los campos necesarios. Una vez hecho esto, haz clic en \'Guardar\'.'

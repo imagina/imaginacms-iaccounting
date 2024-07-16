@@ -3,7 +3,7 @@
 return [
   'sidebar' => [
     'adminGroup' => 'Accounting',
-    'adminPurchases' => 'Expense',
+    'adminPurchases' => 'Purchase',
     'adminProviders' => 'Providers',
     'adminAccountingaccounts' => 'Accounting Accounts'
   ],
@@ -52,7 +52,7 @@ return [
     'checkDigit' => 'DV',
   ],
   'messages' => [
-    'descriptionAnalyze' => 'Upload your files in PDF, image, or Word format (supporting documents, invoices, receipts, etc.) so we can analyze them. Make sure the file is legible.',
+    'descriptionAnalyze' => 'Upload your files in image format (supporting documents, invoices, receipts, etc.) so we can analyze them. Make sure the file is legible.',
     'descriptionValidate' => 'Please carefully review the information below and make sure everything is correct. If you find any errors, correct them before proceeding.',
     'providerDesc' => 'We couldn\'t find the provider. Please verify the identification. If you haven\'t created it yet, select it in the provider field and click \'Create new\'.',
     'providerCreateDesc' => 'Please note that you are about to create a new provider. Remember to verify the information and fill in the necessary fields. Once done, click \'Save\'.'
