@@ -16,6 +16,10 @@ class CreateIaccountingApiKeysTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             // Your fields...
+            $table->string('name');
+            $table->string('slug')->index();
+            $table->longText('params')->nullable();
+            $table->longText('options')->nullable();
 
             // Audit fields
             $table->timestamps();

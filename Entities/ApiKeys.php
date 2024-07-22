@@ -4,10 +4,11 @@ namespace Modules\Iaccounting\Entities;
 
 use Astrotomic\Translatable\Translatable;
 use Modules\Core\Icrud\Entities\CrudModel;
+use Cviebrock\EloquentSluggable\Sluggable;
 
 class ApiKeys extends CrudModel
 {
-  use Translatable;
+  use Translatable, Sluggable;
 
   protected $table = 'iaccounting__apikeys';
   public $transformer = 'Modules\Iaccounting\Transformers\ApiKeysTransformer';
@@ -25,6 +26,10 @@ class ApiKeys extends CrudModel
     'deleting' => [],
     'deleted' => []
   ];
-  public $translatedAttributes = [];
-  protected $fillable = [];
+  protected $fillable = ['name', 'slug', 'params', 'options'];
+
+  protected $casts = [
+    'params' => 'array',
+    'options' => 'array'
+  ];
 }
