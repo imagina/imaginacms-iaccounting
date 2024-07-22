@@ -21,6 +21,20 @@ Route::group(['prefix' =>'/iaccounting/v1'], function (Router $router) {
       'controller' => 'AccountingAccountApiController',
       //'middleware' => ['create' => [], 'index' => [], 'show' => [], 'update' => [], 'delete' => [], 'restore' => []]
     ]);
+    $router->apiCrud([
+      'module' => 'iaccounting',
+      'prefix' => 'apikeys',
+      'controller' => 'ApiKeysApiController',
+      //'middleware' => ['create' => [], 'index' => [], 'show' => [], 'update' => [], 'delete' => [], 'restore' => []]
+    ]);
+    $router->apiCrud([
+      'module' => 'iaccounting',
+      'prefix' => 'mappings',
+      'controller' => 'MappingApiController',
+      //'middleware' => ['create' => [], 'index' => [], 'show' => [], 'update' => [], 'delete' => [], 'restore' => []]
+    ]);
 // append
+
+
 
 });

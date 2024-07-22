@@ -97,7 +97,33 @@ class IaccountingServiceProvider extends ServiceProvider
                 return new \Modules\Iaccounting\Repositories\Cache\CacheAccountingAccountDecorator($repository);
             }
         );
+        $this->app->bind(
+            'Modules\Iaccounting\Repositories\ApiKeysRepository',
+            function () {
+                $repository = new \Modules\Iaccounting\Repositories\Eloquent\EloquentApiKeysRepository(new \Modules\Iaccounting\Entities\ApiKeys());
+
+                if (! config('app.cache')) {
+                    return $repository;
+                }
+
+                return new \Modules\Iaccounting\Repositories\Cache\CacheApiKeysDecorator($repository);
+            }
+        );
+        $this->app->bind(
+            'Modules\Iaccounting\Repositories\MappingRepository',
+            function () {
+                $repository = new \Modules\Iaccounting\Repositories\Eloquent\EloquentMappingRepository(new \Modules\Iaccounting\Entities\Mapping());
+
+                if (! config('app.cache')) {
+                    return $repository;
+                }
+
+                return new \Modules\Iaccounting\Repositories\Cache\CacheMappingDecorator($repository);
+            }
+        );
 // add bindings
+
+
 
 
 
