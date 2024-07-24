@@ -25,7 +25,7 @@ class Mapping extends CrudModel
     'deleting' => [],
     'deleted' => []
   ];
-  protected $fillable = ['name', 'value', 'external_id', 'external_name', 'external_value', 'options', 'apikey_id'];
+  protected $fillable = ['type', 'external_id', 'external_name', 'external_value', 'options', 'apikey_id'];
 
   protected $casts = [
     'options' => 'array'

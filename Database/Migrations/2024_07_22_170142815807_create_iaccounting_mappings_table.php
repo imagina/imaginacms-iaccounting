@@ -16,8 +16,7 @@ class CreateIaccountingMappingsTable extends Migration
       $table->engine = 'InnoDB';
       $table->increments('id');
       // Your fields...
-      $table->string('name');
-      $table->string('value');
+      $table->string('type')->nullable();
       $table->string('external_id', 100)->nullable();
       $table->string('external_name')->nullable();
       $table->string('external_value')->nullable();

@@ -32,11 +32,11 @@ class Purchase extends CrudModel
     'total',
     'subtotal',
     'currency_code',
-    'payment_method',
     'invoice_items',
     'options',
     'provider_id',
-    'accountingaccount_id'
+    'accounting_account_id',
+    'payment_method_id'
   ];
 
   protected $casts = [
@@ -49,8 +49,13 @@ class Purchase extends CrudModel
     return $this->belongsTo(Provider::class);
   }
 
-  public function accountingaccount()
+  public function accountingAccount()
   {
-    return $this->belongsTo(AccountingAccount::class);
+    return $this->belongsTo(Mapping::class);
+  }
+
+  public function paymentMethod()
+  {
+    return $this->belongsTo(Mapping::class);
   }
 }
