@@ -2,14 +2,10 @@
 
 namespace Modules\Iaccounting\Entities;
 
-use Astrotomic\Translatable\Translatable;
 use Modules\Core\Icrud\Entities\CrudModel;
-use Cviebrock\EloquentSluggable\Sluggable;
 
 class ApiKeys extends CrudModel
 {
-  use Translatable, Sluggable;
-
   protected $table = 'iaccounting__apikeys';
   public $transformer = 'Modules\Iaccounting\Transformers\ApiKeysTransformer';
   public $requestValidation = [

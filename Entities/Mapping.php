@@ -2,13 +2,10 @@
 
 namespace Modules\Iaccounting\Entities;
 
-use Astrotomic\Translatable\Translatable;
 use Modules\Core\Icrud\Entities\CrudModel;
 
 class Mapping extends CrudModel
 {
-  use Translatable;
-
   protected $table = 'iaccounting__mappings';
   public $transformer = 'Modules\Iaccounting\Transformers\MappingTransformer';
   public $requestValidation = [
@@ -30,4 +27,9 @@ class Mapping extends CrudModel
   protected $casts = [
     'options' => 'array'
   ];
+
+  public function apiKey()
+  {
+    return $this->belongsTo(ApiKeys::class);
+  }
 }
