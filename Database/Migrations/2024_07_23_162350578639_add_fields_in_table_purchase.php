@@ -14,10 +14,10 @@ return new class extends Migration {
       $table->dropColumn('payment_method');
       $table->renameColumn('elaboration_date', 'invoice_date');
 
-      $table->integer('payment_method_id')->unsigned();
+      $table->integer('payment_method_id')->unsigned()->nullable();
       $table->foreign('payment_method_id')->references('id')->on('iaccounting__mappings')->onDelete('cascade');
 
-      $table->integer('accounting_account_id')->unsigned();
+      $table->integer('accounting_account_id')->unsigned()->nullable();
       $table->foreign('accounting_account_id')->references('id')->on('iaccounting__mappings')->onDelete('cascade');
 
       $table->integer('provider_id')->unsigned();
