@@ -17,7 +17,7 @@ return [
         'destroy' => 'iaccounting::providers.destroy resource',
         'restore' => 'iaccounting::providers.restore resource',
     ],
-    'iaccounting.mappings' => [
+    'iaccounting.apikeys' => [
         'manage' => 'iaccounting::apikeys.manage resource',
         'index' => 'iaccounting::apikeys.list resource',
         'create' => 'iaccounting::apikeys.create resource',

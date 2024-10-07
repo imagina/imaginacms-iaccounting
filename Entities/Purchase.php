@@ -54,8 +54,17 @@ class Purchase extends CrudModel
     return $this->belongsTo(Mapping::class);
   }
 
-  public function paymentMethod()
+  public function getPaymentNameAttribute()
   {
-    return $this->belongsTo(Mapping::class);
+    $payment = new PaymentMethod();
+
+    return $payment->get($this->payment_method_id);
+  }
+
+  public function getDocumentTypeNameAttribute()
+  {
+    $payment = new documentType();
+
+    return $payment->get($this->document_type);
   }
 }

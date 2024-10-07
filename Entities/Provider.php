@@ -41,4 +41,18 @@ class Provider extends CrudModel
   {
     return $this->belongsTo(City::class);
   }
+
+  public function getTypeNameNameAttribute()
+  {
+    $type = new DocumentTypePerson();
+
+    return $type->get($this->type_id);
+  }
+
+  public function getKindPersonNameAttribute()
+  {
+    $kindPerson = new KindPerson();
+
+    return $kindPerson->get($this->person_kind);
+  }
 }
