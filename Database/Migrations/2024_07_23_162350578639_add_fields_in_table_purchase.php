@@ -13,6 +13,8 @@ return new class extends Migration {
     Schema::table('iaccounting__purchases', function (Blueprint $table) {
       $table->dropColumn('payment_method');
       $table->renameColumn('elaboration_date', 'invoice_date');
+      $table->integer('payment_method_id');
+      $table->integer('document_type')->change();
 
       $table->integer('accounting_account_id')->unsigned()->nullable();
       $table->foreign('accounting_account_id')->references('id')->on('iaccounting__mappings')->onDelete('cascade');
@@ -26,6 +28,11 @@ return new class extends Migration {
         $table->dropColumn('provider_id_type');
         $table->dropColumn('provider_id_number');
       }
+    });
+
+    Schema::table('iaccounting__providers', function (Blueprint $table) {
+      $table->integer('person_kind')->change();
+      $table->integer('type_id')->change();
     });
   }
 

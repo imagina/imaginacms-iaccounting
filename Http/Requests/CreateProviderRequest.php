@@ -9,10 +9,10 @@ class CreateProviderRequest extends BaseFormRequest
     public function rules()
     {
         return [
-          'person_kind' => 'required|min:2',
+          'person_kind' => 'required',
           'name' => 'required|min:2',
-          'type_id' => 'required|min:2',
-          'identification' => 'required|min:2',
+          'type_id' => 'required',
+          'identification' => 'required|min:4',
           'city_id' => 'required',
         ];
     }

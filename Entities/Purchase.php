@@ -58,13 +58,13 @@ class Purchase extends CrudModel
   {
     $payment = new PaymentMethod();
 
-    return $payment->get($this->payment_method_id);
+    return $payment->show($this->payment_method_id);
   }
 
   public function getDocumentTypeNameAttribute()
   {
-    $payment = new documentType();
+    $payment = new DocumentType();
 
-    return $payment->get($this->document_type);
+    return $payment->show($this->document_type);
   }
 }

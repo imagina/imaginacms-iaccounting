@@ -9,11 +9,11 @@ class CreatePurchaseRequest extends BaseFormRequest
     public function rules()
     {
         return [
-          'document_type' => 'required|min:2',
+          'document_type' => 'required',
           'invoice_date' => 'required|min:2',
           'total' => 'required',
           'subtotal' => 'required',
-          'payment_method' => 'required',
+          'payment_method_id' => 'required',
           'provider_id' => 'required',
         ];
     }
