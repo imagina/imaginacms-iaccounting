@@ -18,8 +18,8 @@ return [
     'updateAccountingAccount' => 'Update Accounting Account',
     'newMappings' => 'New Mapping',
     'updateMapping' => 'Update Mapping',
-    'newApikey' => 'New API Key',
-    'updateApiKey' => 'Update API Key',
+    'newOrigin' => 'New Origin',
+    'updateOrigin' => 'Update Origin',
   ],
   'button' => [
   ],

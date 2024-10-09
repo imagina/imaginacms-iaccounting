@@ -18,8 +18,8 @@ return [
     'updateAccountingAccount' => 'Actualizar Cuenta Contable',
     'newMappings' => 'Nuevo Mapeo',
     'updateMapping' => 'Actualizar Mapeo',
-    'newApikey' => 'Nueva Clave API',
-    'updateApiKey' => 'Actualizar Clave API',
+    'newOrigin' => 'Nueva Origen',
+    'updateOrigin' => 'Actualizar Origen',
   ],
   'button' => [
   ],
