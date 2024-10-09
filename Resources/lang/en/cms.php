@@ -5,7 +5,9 @@ return [
     'adminGroup' => 'Accounting',
     'adminPurchases' => 'Purchase',
     'adminProviders' => 'Providers',
-    'adminAccountingaccounts' => 'Accounting Accounts'
+    'adminAccountingaccounts' => 'Accounting Accounts',
+    'adminApiKeys' => 'API Keys',
+    'adminMappings' => 'Mappings'
   ],
   'title' => [
     'analyzeDocument' => 'Upload Your Document for Analysis',
@@ -15,6 +17,10 @@ return [
     'newProvider' => 'New Provider',
     'newAccountingAccount' => 'New Accounting Account',
     'updateAccountingAccount' => 'Update Accounting Account',
+    'newMappings' => 'New Mapping',
+    'updateMapping' => 'Update Mapping',
+    'newApikey' => 'New API Key',
+    'updateApiKey' => 'Update API Key',
   ],
   'button' => [
   ],
@@ -32,6 +38,7 @@ return [
     'cash' => 'Cash',
     'bankAccount' => 'Bank Account',
     'credit' => 'Credit',
+    'externalName' => 'External Name',
   ],
   'form' => [
     'elaborationDate' => 'Elaboration Date',
@@ -50,6 +57,8 @@ return [
     'documentAnalysis' => 'Document for Analysis',
     'kindPerson' => 'Kind of Person',
     'checkDigit' => 'DV',
+    'params' => 'Params',
+    'apiKey' => 'API Key',
   ],
   'messages' => [
     'descriptionAnalyze' => 'Upload your files in image format (supporting documents, invoices, receipts, etc.) so we can analyze them. Make sure the file is legible.',

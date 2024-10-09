@@ -5,7 +5,9 @@ return [
     'adminGroup' => 'Contabilidad',
     'adminPurchases' => 'Compras',
     'adminProviders' => 'Proveedores',
-    'adminAccountingaccounts' => 'Cuentas Contables'
+    'adminAccountingaccounts' => 'Cuentas Contables',
+    'adminApiKeys' => 'Llaves API',
+    'adminMappings' => 'Mapeos',
   ],
   'title' => [
     'uploadDocument' => 'Sube tu Documento para Analizar',
@@ -15,6 +17,10 @@ return [
     'newProvider' => 'Nuevo Proveedor',
     'newAccountingAccount' => 'Nueva Cuenta Contable',
     'updateAccountingAccount' => 'Actualizar Cuenta Contable',
+    'newMappings' => 'Nuevo Mapeo',
+    'updateMapping' => 'Actualizar Mapeo',
+    'newApikey' => 'Nueva Clave API',
+    'updateApiKey' => 'Actualizar Clave API',
   ],
   'button' => [
   ],
@@ -32,6 +38,7 @@ return [
     'cash' => 'Efectivo',
     'bankAccount' => 'Cuenta Bancaria',
     'credit' => 'Crédito',
+    'externalName' => 'Nombre Externo',
   ],
   'form' => [
     'elaborationDate' => 'Fecha de elaboración',
@@ -49,7 +56,9 @@ return [
     'idType' => 'Tipo de Identificación',
     'documentAnalysis' => 'Documento para Analizar',
     'kindPerson' => 'Tipo de persona',
-    'checkDigit' => 'DV'
+    'checkDigit' => 'DV',
+    'params' => 'Parametros',
+    'apiKey' => 'Llave API',
   ],
   'messages' => [
     'descriptionAnalyze' => 'Sube tus archivos en formato imagen (soportes, facturas, recibos, etc.) para que podamos analizarlos. Asegúrate de que el archivo sea legible.',
