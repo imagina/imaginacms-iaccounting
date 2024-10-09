@@ -18,7 +18,7 @@ return [
     'updateAccountingAccount' => 'Actualizar Cuenta Contable',
     'newMappings' => 'Nuevo Mapeo',
     'updateMapping' => 'Actualizar Mapeo',
-    'newOrigin' => 'Nueva Origen',
+    'newOrigin' => 'Nuevo Origen',
     'updateOrigin' => 'Actualizar Origen',
   ],
   'button' => [
