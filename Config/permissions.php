@@ -17,22 +17,6 @@ return [
         'destroy' => 'iaccounting::providers.destroy resource',
         'restore' => 'iaccounting::providers.restore resource',
     ],
-    'iaccounting.apikeys' => [
-        'manage' => 'iaccounting::apikeys.manage resource',
-        'index' => 'iaccounting::apikeys.list resource',
-        'create' => 'iaccounting::apikeys.create resource',
-        'edit' => 'iaccounting::apikeys.edit resource',
-        'destroy' => 'iaccounting::apikeys.destroy resource',
-        'restore' => 'iaccounting::apikeys.restore resource',
-    ],
-    'iaccounting.mappings' => [
-        'manage' => 'iaccounting::mappings.manage resource',
-        'index' => 'iaccounting::mappings.list resource',
-        'create' => 'iaccounting::mappings.create resource',
-        'edit' => 'iaccounting::mappings.edit resource',
-        'destroy' => 'iaccounting::mappings.destroy resource',
-        'restore' => 'iaccounting::mappings.restore resource',
-    ],
     'iaccounting.origins' => [
         'manage' => 'iaccounting::origins.manage resource',
         'index' => 'iaccounting::origins.list resource',

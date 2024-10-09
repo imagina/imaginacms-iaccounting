@@ -16,8 +16,7 @@ return new class extends Migration {
       $table->integer('payment_method_id');
       $table->integer('document_type')->change();
 
-      $table->integer('accounting_account_id')->unsigned()->nullable();
-      $table->foreign('accounting_account_id')->references('id')->on('iaccounting__mappings')->onDelete('cascade');
+      $table->integer('accounting_account_id')->nullable();
 
       $table->integer('provider_id')->unsigned();
       $table->foreign('provider_id')->references('id')->on('iaccounting__providers')->onDelete('cascade');

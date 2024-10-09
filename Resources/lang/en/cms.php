@@ -6,8 +6,7 @@ return [
     'adminPurchases' => 'Purchase',
     'adminProviders' => 'Providers',
     'adminAccountingaccounts' => 'Accounting Accounts',
-    'adminApiKeys' => 'API Keys',
-    'adminMappings' => 'Mappings'
+    'adminOrigins' => 'Origins'
   ],
   'title' => [
     'analyzeDocument' => 'Upload Your Document for Analysis',

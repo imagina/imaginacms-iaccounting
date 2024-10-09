@@ -6,8 +6,7 @@ return [
     'adminPurchases' => 'Compras',
     'adminProviders' => 'Proveedores',
     'adminAccountingaccounts' => 'Cuentas Contables',
-    'adminApiKeys' => 'Llaves API',
-    'adminMappings' => 'Mapeos',
+    'adminOrigins' => 'Origenes'
   ],
   'title' => [
     'uploadDocument' => 'Sube tu Documento para Analizar',
