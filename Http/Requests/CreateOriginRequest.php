@@ -4,7 +4,7 @@ namespace Modules\Iaccounting\Http\Requests;
 
 use Modules\Core\Internationalisation\BaseFormRequest;
 
-class CreateMappingRequest extends BaseFormRequest
+class CreateOriginRequest extends BaseFormRequest
 {
     public function rules()
     {

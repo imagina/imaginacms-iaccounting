@@ -33,7 +33,16 @@ return [
         'destroy' => 'iaccounting::mappings.destroy resource',
         'restore' => 'iaccounting::mappings.restore resource',
     ],
+    'iaccounting.origins' => [
+        'manage' => 'iaccounting::origins.manage resource',
+        'index' => 'iaccounting::origins.list resource',
+        'create' => 'iaccounting::origins.create resource',
+        'edit' => 'iaccounting::origins.edit resource',
+        'destroy' => 'iaccounting::origins.destroy resource',
+        'restore' => 'iaccounting::origins.restore resource',
+    ],
 // append
+
 
 
 

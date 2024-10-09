@@ -4,6 +4,6 @@ namespace Modules\Iaccounting\Repositories;
 
 use Modules\Core\Icrud\Repositories\BaseCrudRepository;
 
-interface ApiKeysRepository extends BaseCrudRepository
+interface OriginRepository extends BaseCrudRepository
 {
 }

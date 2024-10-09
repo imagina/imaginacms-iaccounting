@@ -86,27 +86,15 @@ class IaccountingServiceProvider extends ServiceProvider
             }
         );
         $this->app->bind(
-            'Modules\Iaccounting\Repositories\ApiKeysRepository',
+            'Modules\Iaccounting\Repositories\OriginRepository',
             function () {
-                $repository = new \Modules\Iaccounting\Repositories\Eloquent\EloquentApiKeysRepository(new \Modules\Iaccounting\Entities\ApiKeys());
+                $repository = new \Modules\Iaccounting\Repositories\Eloquent\EloquentOriginRepository(new \Modules\Iaccounting\Entities\Origin());
 
                 if (! config('app.cache')) {
                     return $repository;
                 }
 
-                return new \Modules\Iaccounting\Repositories\Cache\CacheApiKeysDecorator($repository);
-            }
-        );
-        $this->app->bind(
-            'Modules\Iaccounting\Repositories\MappingRepository',
-            function () {
-                $repository = new \Modules\Iaccounting\Repositories\Eloquent\EloquentMappingRepository(new \Modules\Iaccounting\Entities\Mapping());
-
-                if (! config('app.cache')) {
-                    return $repository;
-                }
-
-                return new \Modules\Iaccounting\Repositories\Cache\CacheMappingDecorator($repository);
+                return new \Modules\Iaccounting\Repositories\Cache\CacheOriginDecorator($repository);
             }
         );
 // add bindings

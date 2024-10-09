@@ -4,13 +4,14 @@ namespace Modules\Iaccounting\Entities;
 
 use Modules\Core\Icrud\Entities\CrudModel;
 
-class Mapping extends CrudModel
+class Origin extends CrudModel
 {
-  protected $table = 'iaccounting__mappings';
-  public $transformer = 'Modules\Iaccounting\Transformers\MappingTransformer';
+  protected $table = 'iaccounting__origins';
+  public $transformer = 'Modules\Iaccounting\Transformers\OriginTransformer';
+  public $repository = 'Modules\Iaccounting\Repositories\OriginRepository';
   public $requestValidation = [
-      'create' => 'Modules\Iaccounting\Http\Requests\CreateMappingRequest',
-      'update' => 'Modules\Iaccounting\Http\Requests\UpdateMappingRequest',
+      'create' => 'Modules\Iaccounting\Http\Requests\CreateOriginRequest',
+      'update' => 'Modules\Iaccounting\Http\Requests\UpdateOriginRequest',
     ];
   //Instance external/internal events to dispatch with extraData
   public $dispatchesEventsWithBindings = [
@@ -22,14 +23,10 @@ class Mapping extends CrudModel
     'deleting' => [],
     'deleted' => []
   ];
-  protected $fillable = ['type', 'external_id', 'external_name', 'external_value', 'options', 'apikey_id'];
+  protected $fillable = ['name', 'slug', 'params', 'options'];
 
   protected $casts = [
+    'params' => 'array',
     'options' => 'array'
   ];
-
-  public function apiKey()
-  {
-    return $this->belongsTo(ApiKeys::class);
-  }
 }

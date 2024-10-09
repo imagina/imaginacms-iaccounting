@@ -2,10 +2,10 @@
 
 namespace Modules\Iaccounting\Repositories\Eloquent;
 
-use Modules\Iaccounting\Repositories\ApiKeysRepository;
+use Modules\Iaccounting\Repositories\OriginRepository;
 use Modules\Core\Icrud\Repositories\Eloquent\EloquentCrudRepository;
 
-class EloquentApiKeysRepository extends EloquentCrudRepository implements ApiKeysRepository
+class EloquentOriginRepository extends EloquentCrudRepository implements OriginRepository
 {
   /**
    * Filter names to replace
@@ -18,6 +18,15 @@ class EloquentApiKeysRepository extends EloquentCrudRepository implements ApiKey
    * @var array
    */
   protected $replaceSyncModelRelations = [];
+
+  /**
+   * Attribute to define default relations
+   * all apply to index and show
+   * index apply in the getItemsBy
+   * show apply in the getItem
+   * @var array
+   */
+  protected $with = [/*all => [] ,index => [],show => []*/];
 
   /**
    * Filter query

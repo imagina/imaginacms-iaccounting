@@ -4,7 +4,7 @@ namespace Modules\Iaccounting\Http\Requests;
 
 use Modules\Core\Internationalisation\BaseFormRequest;
 
-class CreateApiKeysRequest extends BaseFormRequest
+class UpdateOriginRequest extends BaseFormRequest
 {
     public function rules()
     {
@@ -34,5 +34,4 @@ class CreateApiKeysRequest extends BaseFormRequest
     public function getValidator(){
         return $this->getValidatorInstance();
     }
-    
 }

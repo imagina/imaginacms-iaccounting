@@ -4,7 +4,7 @@ namespace Modules\Iaccounting\Transformers;
 
 use Modules\Core\Icrud\Transformers\CrudResource;
 
-class ApiKeysTransformer extends CrudResource
+class OriginTransformer extends CrudResource
 {
   /**
    * Attribute to exclude relations from transformed data

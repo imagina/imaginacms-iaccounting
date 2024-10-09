@@ -15,18 +15,6 @@ Route::group(['prefix' =>'/iaccounting/v1'], function (Router $router) {
       'controller' => 'ProviderApiController',
       //'middleware' => ['create' => [], 'index' => [], 'show' => [], 'update' => [], 'delete' => [], 'restore' => []]
     ]);
-    $router->apiCrud([
-      'module' => 'iaccounting',
-      'prefix' => 'apikeys',
-      'controller' => 'ApiKeysApiController',
-      //'middleware' => ['create' => [], 'index' => [], 'show' => [], 'update' => [], 'delete' => [], 'restore' => []]
-    ]);
-    $router->apiCrud([
-      'module' => 'iaccounting',
-      'prefix' => 'mappings',
-      'controller' => 'MappingApiController',
-      //'middleware' => ['create' => [], 'index' => [], 'show' => [], 'update' => [], 'delete' => [], 'restore' => []]
-    ]);
 
     $router->apiCrud([
       'module' => 'iaccounting',
@@ -55,7 +43,23 @@ Route::group(['prefix' =>'/iaccounting/v1'], function (Router $router) {
       'staticEntity' => 'Modules\Iaccounting\Entities\KindPerson',
       //'middleware' => ['create' => [], 'index' => [], 'show' => [], 'update' => [], 'delete' => [], 'restore' => []]
     ]);
+    $router->apiCrud([
+      'module' => 'iaccounting',
+      'prefix' => 'origins',
+      'controller' => 'OriginApiController',
+      'permission' => 'iaccounting.origins',
+      //'middleware' => ['create' => [], 'index' => [], 'show' => [], 'update' => [], 'delete' => [], 'restore' => []],
+      // 'customRoutes' => [ // Include custom routes if needed
+      //  [
+      //    'method' => 'post', // get,post,put....
+      //    'path' => '/some-path', // Route Path
+      //    'uses' => 'ControllerMethodName', //Name of the controller method to use
+      //    'middleware' => [] // if not set up middleware, auth:api will be the default
+      //  ]
+      // ]
+    ]);
 // append
+
 
 
 
