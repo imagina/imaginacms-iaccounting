@@ -3,6 +3,7 @@
 namespace Modules\Iaccounting\Entities;
 
 use Modules\Core\Icrud\Entities\CrudModel;
+use Modules\Isite\Relations\EmptyRelation;
 
 class Origin extends CrudModel
 {
@@ -29,4 +30,12 @@ class Origin extends CrudModel
     'params' => 'array',
     'options' => 'array'
   ];
+
+  public function externalObjects()
+  {
+    if (is_module_enabled('Ilinker')) {
+      return $this->morphOne(\Modules\Ilinker\Entities\ExternalObjectMapping::class, 'entity');
+    }
+    return new EmptyRelation();
+  }
 }
