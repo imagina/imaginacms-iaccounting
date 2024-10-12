@@ -28,8 +28,8 @@ return [
   'label' => [
     'documentSupport' => 'Support Document',
     'electronicInvoice' => 'Electronic Invoice',
-    'company' => 'Company',
-    'person' => 'Person',
+    'company' => 'Legal Person',
+    'person' => 'Natural Person',
     'CC' => 'Citizenship ID Card',
     'NIT' => 'Tax Identification Number',
     'CE' =>'Foreign ID Card',
@@ -38,6 +38,7 @@ return [
     'bankAccount' => 'Bank Account',
     'credit' => 'Credit',
     'externalName' => 'External Name',
+    'companyName' => 'Company Name'
   ],
   'form' => [
     'elaborationDate' => 'Elaboration Date',

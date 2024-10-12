@@ -28,8 +28,8 @@ return [
   'label' => [
     'documentSupport' => 'Documento de Soporte',
     'electronicInvoice' => 'Factura Electronica',
-    'company' => 'Empresa',
-    'person' => 'Persona',
+    'company' => 'Persona Jurídica',
+    'person' => 'Persona Natural',
     'CC' => 'Cédula de Ciudadanía',
     'NIT' => 'Número de Identificación Tributaria',
     'CE' =>'Cédula Extranjera',
@@ -38,6 +38,7 @@ return [
     'bankAccount' => 'Cuenta Bancaria',
     'credit' => 'Crédito',
     'externalName' => 'Nombre Externo',
+    'companyName' => 'Razón Social'
   ],
   'form' => [
     'elaborationDate' => 'Fecha de elaboración',
