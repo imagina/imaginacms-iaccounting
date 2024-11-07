@@ -3,6 +3,8 @@
 namespace Modules\Iaccounting\Events\Handlers;
 
 
+use Modules\Core\Icrud\Transformers\CrudResource;
+
 class CallWorkflow
 {
   public function handle($event = null)
@@ -16,15 +18,24 @@ class CallWorkflow
     $providerId = $attributes["provider_id"];
 
     $providerRepository = app("Modules\Iaccounting\Repositories\ProviderRepository");
+    $originRepository = app("Modules\Iaccounting\Repositories\OriginRepository");
+    $origins = $originRepository->getItemsBy(json_decode(json_encode([])));
+
+    $origin = $origins[0] ?? null;
+
+    if($origin) {
+      $attributes["origin"] = CrudResource::transformData($origin);
+    }
+
     $params = ['include' => 'city'];
 
     $provider = $providerRepository->getItem($providerId, $params);
 
     if ($provider) {
       $attributes["provider"] = $provider;
-      $attributes["provider"]['city'] = $provider->city;
-      $attributes["provider"]['typeName'] = $provider->typeName;
-      $attributes["provider"]['kindPersonName'] = $provider->kindPersonName;
+      $attributes["city"] = $provider->city;
+      $attributes["typeName"] = $provider->typeName;
+      $attributes["kindPersonName"] = $provider->kindPersonName;
     }
 
     $service = app("Modules\Iaccounting\Services\WebhookService");
