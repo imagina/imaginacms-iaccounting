@@ -30,6 +30,7 @@ return new class extends Migration {
     });
 
     Schema::table('iaccounting__providers', function (Blueprint $table) {
+      $table->string('email')->nullable();
       $table->integer('person_kind')->change();
       $table->integer('type_id')->change();
     });
@@ -42,7 +43,6 @@ return new class extends Migration {
   {
     Schema::table('iaccounting__purchases', function (Blueprint $table) {
       $table->renameColumn('invoice_date', 'elaboration_date');
-      $table->dropForeign(['accounting_account_id']);
       $table->dropForeign(['provider_id']);
     });
   }

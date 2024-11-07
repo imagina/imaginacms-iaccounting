@@ -9,6 +9,7 @@ class Provider extends CrudModel
 {
   protected $table = 'iaccounting__providers';
   public $transformer = 'Modules\Iaccounting\Transformers\ProviderTransformer';
+  public $repository = 'Modules\Iaccounting\Repositories\PurchaseRepository';
   public $requestValidation = [
     'create' => 'Modules\Iaccounting\Http\Requests\CreateProviderRequest',
     'update' => 'Modules\Iaccounting\Http\Requests\UpdateProviderRequest',
@@ -28,6 +29,7 @@ class Provider extends CrudModel
     'name',
     'lastname',
     'type_id',
+    'email',
     'identification',
     'check_digit',
     'address',

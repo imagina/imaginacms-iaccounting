@@ -11,6 +11,7 @@ class Purchase extends CrudModel
 
   protected $table = 'iaccounting__purchases';
   public $transformer = 'Modules\Iaccounting\Transformers\PurchaseTransformer';
+  public $repository = 'Modules\Iaccounting\Repositories\PurchaseRepository';
   public $requestValidation = [
       'create' => 'Modules\Iaccounting\Http\Requests\CreatePurchaseRequest',
       'update' => 'Modules\Iaccounting\Http\Requests\UpdatePurchaseRequest',
