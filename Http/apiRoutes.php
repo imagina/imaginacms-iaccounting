@@ -7,6 +7,13 @@ Route::group(['prefix' =>'/iaccounting/v1'], function (Router $router) {
       'module' => 'iaccounting',
       'prefix' => 'purchases',
       'controller' => 'PurchaseApiController',
+      'customRoutes' => [
+        [
+          'method' => 'post',
+          'path' => '/analyze-img',
+          'uses' => 'analyzeImage',
+        ]
+      ]
       //'middleware' => ['create' => [], 'index' => [], 'show' => [], 'update' => [], 'delete' => [], 'restore' => []]
     ]);
     $router->apiCrud([

@@ -14,11 +14,13 @@ class KindPerson extends CrudStaticModel
     $this->records = [
       self::PERSON => [
         'id' => self::PERSON,
-        'title' => trans('iaccounting::cms.label.person')
+        'title' => trans('iaccounting::cms.label.person'),
+        'sigoId' => 'person'
       ],
       self::COMPANY => [
         'id' => self::COMPANY,
-        'title' => trans('iaccounting::cms.label.company')
+        'title' => trans('iaccounting::cms.label.company'),
+        'sigoId' => 'company'
       ]
     ];
   }
