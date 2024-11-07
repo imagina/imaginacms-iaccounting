@@ -17,7 +17,9 @@ class Provider extends CrudModel
   public $dispatchesEventsWithBindings = [
     //eg. ['path' => 'path/module/event', 'extraData' => [/*...optional*/]]
     'created' => [],
-    'creating' => [],
+    'creating' => [
+      ['path' => 'Modules\Iaccounting\Events\ProviderIsCreating']
+    ],
     'updated' => [],
     'updating' => [],
     'deleting' => [],
