@@ -4,7 +4,7 @@ namespace Modules\Iaccounting\Providers;
 
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use Modules\Iaccounting\Events\Handlers\CallWorkflow;
-use Modules\Iaccounting\Events\ProviderIsCreating;
+use Modules\Iaccounting\Events\PurchaseIsCreating;
 use Illuminate\Support\Facades\Event;
 
 class EventServiceProvider extends ServiceProvider
@@ -15,7 +15,7 @@ class EventServiceProvider extends ServiceProvider
     public function register()
     {
       Event::listen(
-        ProviderIsCreating::class,
+        PurchaseIsCreating::class,
         [CallWorkflow::class, 'handle']
       );
     }
