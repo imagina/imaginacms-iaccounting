@@ -38,8 +38,8 @@ class Purchase extends CrudModel
     'invoice_items',
     'options',
     'provider_id',
-    'accounting_account_id',
-    'payment_method_id'
+    'payment_method_id',
+    'status_id'
   ];
 
   protected $casts = [
@@ -52,9 +52,10 @@ class Purchase extends CrudModel
     return $this->belongsTo(Provider::class);
   }
 
-  public function accountingAccount()
+  public function getStatusNameAttribute()
   {
-    return $this->belongsTo(Mapping::class);
+    $status = new Status();
+    return $status->show($this->status_id);
   }
 
   public function getPaymentNameAttribute()

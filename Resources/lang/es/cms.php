@@ -38,7 +38,11 @@ return [
     'bankAccount' => 'Cuenta Bancaria',
     'credit' => 'Crédito',
     'externalName' => 'Nombre Externo',
-    'companyName' => 'Razón Social'
+    'companyName' => 'Razón Social',
+    'failed' => 'Fallido',
+    'pending' => 'Pendiente',
+    'sending' => 'Enviado',
+    'account' => 'Cuenta Contable'
   ],
   'form' => [
     'elaborationDate' => 'Fecha de elaboración',

@@ -14,6 +14,7 @@ return new class extends Migration {
       $table->dropColumn('payment_method');
       $table->renameColumn('elaboration_date', 'invoice_date');
       $table->integer('payment_method_id');
+      $table->integer('status_id');
       $table->integer('document_type')->change();
 
       $table->integer('accounting_account_id')->nullable();

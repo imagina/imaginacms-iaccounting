@@ -38,7 +38,11 @@ return [
     'bankAccount' => 'Bank Account',
     'credit' => 'Credit',
     'externalName' => 'External Name',
-    'companyName' => 'Company Name'
+    'companyName' => 'Company Name',
+    'failed' => 'Failed',
+    'pending' => 'Pending',
+    'sending' => 'Sending',
+    'account' => 'Account'
   ],
   'form' => [
     'elaborationDate' => 'Elaboration Date',
