@@ -2,7 +2,7 @@
 
 namespace Modules\Iaccounting\Events;
 
-class PurchaseIsCreating
+class PurchaseWasCreated
 {
 
   public $entity;

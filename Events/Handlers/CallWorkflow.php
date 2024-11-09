@@ -4,6 +4,7 @@ namespace Modules\Iaccounting\Events\Handlers;
 
 
 use Modules\Core\Icrud\Transformers\CrudResource;
+use Modules\Iaccounting\Entities\Status;
 
 class CallWorkflow
 {
@@ -14,6 +15,9 @@ class CallWorkflow
     if(!isset($entity)) return null;
 
     $attributes = $entity["data"];
+    $model = $entity["model"];
+
+    $attributes["number_invoice"] = $model->id;
 
     $providerId = $attributes["provider_id"];
 
@@ -39,15 +43,15 @@ class CallWorkflow
     }
 
     $service = app("Modules\Iaccounting\Services\WebhookService");
-    try {
-      $httpResponse = $service->dispatchWebhook(['attributes' => $attributes], ['extra_url' => '/accounting/purchases']);
-      $status = $httpResponse['code'];
-      $data = $httpResponse['response'];
-      dd($data);
+    $httpResponse = $service->dispatchWebhook(['attributes' => $attributes], ['extra_url' => '/accounting/purchases']);
+    $status = $httpResponse['code'];
+    $data = $httpResponse['response'];
 
-      $event->entity["data"]["external_id"] = $data["id"];
+    $updateData = ['status_id' => Status::FAILED];
 
-    } catch (\Exception $e) {
+    if(isset($data->id)) {
+      $updateData = ['status_id' => Status::SENDING];
     }
+    $model->update((array)$updateData);
   }
 }

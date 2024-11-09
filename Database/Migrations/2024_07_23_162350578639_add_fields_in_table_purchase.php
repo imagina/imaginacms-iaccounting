@@ -14,10 +14,8 @@ return new class extends Migration {
       $table->dropColumn('payment_method');
       $table->renameColumn('elaboration_date', 'invoice_date');
       $table->integer('payment_method_id');
-      $table->integer('status_id');
+      $table->integer('status_id')->default(0);
       $table->integer('document_type')->change();
-
-      $table->integer('accounting_account_id')->nullable();
 
       $table->integer('provider_id')->unsigned();
       $table->foreign('provider_id')->references('id')->on('iaccounting__providers')->onDelete('cascade');

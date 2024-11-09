@@ -15,12 +15,12 @@ class KindPerson extends CrudStaticModel
       self::PERSON => [
         'id' => self::PERSON,
         'title' => trans('iaccounting::cms.label.person'),
-        'sigoId' => 'person'
+        'sigoId' => 'Person'
       ],
       self::COMPANY => [
         'id' => self::COMPANY,
         'title' => trans('iaccounting::cms.label.company'),
-        'sigoId' => 'company'
+        'sigoId' => 'Company'
       ]
     ];
   }

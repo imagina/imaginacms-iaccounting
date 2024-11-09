@@ -19,10 +19,10 @@ class Purchase extends CrudModel
   //Instance external/internal events to dispatch with extraData
   public $dispatchesEventsWithBindings = [
     //eg. ['path' => 'path/module/event', 'extraData' => [/*...optional*/]]
-    'created' => [],
-    'creating' => [
-      ['path' => 'Modules\Iaccounting\Events\PurchaseIsCreating']
+    'created' => [
+      ['path' => 'Modules\Iaccounting\Events\PurchaseWasCreated']
     ],
+    'creating' => [],
     'updated' => [],
     'updating' => [],
     'deleting' => [],
