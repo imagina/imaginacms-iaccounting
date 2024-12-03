@@ -37,6 +37,11 @@ class EloquentPurchaseRepository extends EloquentCrudRepository implements Purch
      * if (isset($filter->status)) $query->where('status', $filter->status);
      *
      */
+    $userId = \Auth::id() ?? -1;
+
+    if(isset($userId)) {
+      $query->where('created_by', $userId);
+    }
 
     //Response
     return $query;
