@@ -2,10 +2,10 @@
 
 namespace Modules\Iaccounting\Repositories\Eloquent;
 
-use Modules\Iaccounting\Repositories\PurchaseRepository;
+use Modules\Iaccounting\Repositories\ProviderRepository;
 use Modules\Core\Icrud\Repositories\Eloquent\EloquentCrudRepository;
 
-class EloquentPurchaseRepository extends EloquentCrudRepository implements PurchaseRepository
+class EloquentProviderRepository extends EloquentCrudRepository implements ProviderRepository
 {
   /**
    * Filter names to replace

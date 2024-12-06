@@ -4,17 +4,16 @@ namespace Modules\Iaccounting\Http\Requests;
 
 use Modules\Core\Internationalisation\BaseFormRequest;
 
-class CreatePurchaseRequest extends BaseFormRequest
+class CreateProviderRequest extends BaseFormRequest
 {
     public function rules()
     {
         return [
-          'document_type' => 'required',
-          'invoice_date' => 'required|min:2',
-          'total' => 'required',
-          'subtotal' => 'required',
-          'payment_method_id' => 'required',
-          'provider_id' => 'required',
+          'person_kind' => 'required',
+          'name' => 'required|min:2',
+          'type_id' => 'required',
+          'identification' => 'required|min:4',
+          'city_id' => 'required',
         ];
     }
 
