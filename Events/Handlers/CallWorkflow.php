@@ -23,35 +23,40 @@ class CallWorkflow
 
     $providerRepository = app("Modules\Iaccounting\Repositories\ProviderRepository");
     $originRepository = app("Modules\Iaccounting\Repositories\OriginRepository");
-    $origins = $originRepository->getItemsBy(json_decode(json_encode([])));
+    $origins = $originRepository->getItemsBy(json_decode(json_encode(['filter' => []])));
 
     $origin = $origins[0] ?? null;
 
+    if(!isset($origin)) {
+      $updateData = ['status_id' => Status::FAILED];
+    }
+
     if($origin) {
       $attributes["origin"] = CrudResource::transformData($origin);
+
+      $params = ['include' => 'city'];
+
+      $provider = $providerRepository->getItem($providerId, $params);
+
+      if ($provider) {
+        $attributes["provider"] = $provider;
+        $attributes["city"] = $provider->city;
+        $attributes["typeName"] = $provider->typeName;
+        $attributes["kindPersonName"] = $provider->kindPersonName;
+      }
+
+      $service = app("Modules\Iaccounting\Services\WebhookService");
+      $httpResponse = $service->dispatchWebhook(['attributes' => $attributes], ['extra_url' => '/accounting/purchases']);
+      $status = $httpResponse['code'];
+      $data = $httpResponse['response'];
+
+      $updateData = ['status_id' => Status::FAILED];
+
+      if(isset($data->id)) {
+        $updateData = ['status_id' => Status::SENDING];
+      }
     }
 
-    $params = ['include' => 'city'];
-
-    $provider = $providerRepository->getItem($providerId, $params);
-
-    if ($provider) {
-      $attributes["provider"] = $provider;
-      $attributes["city"] = $provider->city;
-      $attributes["typeName"] = $provider->typeName;
-      $attributes["kindPersonName"] = $provider->kindPersonName;
-    }
-
-    $service = app("Modules\Iaccounting\Services\WebhookService");
-    $httpResponse = $service->dispatchWebhook(['attributes' => $attributes], ['extra_url' => '/accounting/purchases']);
-    $status = $httpResponse['code'];
-    $data = $httpResponse['response'];
-
-    $updateData = ['status_id' => Status::FAILED];
-
-    if(isset($data->id)) {
-      $updateData = ['status_id' => Status::SENDING];
-    }
     $model->update((array)$updateData);
   }
 }
