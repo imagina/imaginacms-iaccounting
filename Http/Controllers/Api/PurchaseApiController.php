@@ -24,7 +24,13 @@ class PurchaseApiController extends BaseCrudController
   {
     $attributes = $request->input('attributes') ?? [];
     $service = app("Modules\Iaccounting\Services\WebhookService");
+    $originRepository = app("Modules\Iaccounting\Repositories\OriginRepository");
     try {
+      $origins = $originRepository->getItemsBy(json_decode(json_encode(['filter' => []])));
+      $origin = $origins[0] ?? null;
+
+      $attributes['origin'] = CrudResource::transformData($origin);
+
       $httpResponse = $service->dispatchWebhook(['attributes' => $attributes], ['extra_url' => '/accounting/img']);
       $status = $httpResponse['code'];
       $data = $httpResponse['response'];
